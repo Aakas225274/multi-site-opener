@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>10 Sites Ek Sath Kholein</title>
+  <title>Auto Open Sites</title>
   <script>
-    function openSites() {
+    window.onload = function() {
       const urls = [
         "https://rechargejioairtel.blogspot.com/?m=1",
         "https://rechargejioairtel.blogspot.com/?m=1",
@@ -17,20 +17,19 @@
         "https://www.profitableratecpm.com/ky141uaj5?key=7aadd6e991c234d460c699d2838cece9"
       ];
 
-      let index = 0;
+      let i = 0;
       const interval = setInterval(() => {
-        if (index < urls.length) {
-          window.open(urls[index], '_blank');
-          index++;
+        if (i < urls.length) {
+          window.open(urls[i], '_blank');
+          i++;
         } else {
           clearInterval(interval);
         }
-      }, 1000); // हर 1 सेकंड में एक टैब खुलेगा
-    }
+      }, 1000); // 1 second gap
+    };
   </script>
 </head>
 <body>
-  <h2>👇 नीचे क्लिक करें, सभी 10 वेबसाइट्स धीरे-धीरे खुलेंगी</h2>
-  <button onclick="openSites()">सभी साइट्स खोलें</button>
+  <h2>Websites khul rahi hain... कृपया Pop-up Allow करें</h2>
 </body>
 </html>
