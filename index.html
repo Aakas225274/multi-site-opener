@@ -16,12 +16,21 @@
         "https://www.profitableratecpm.com/f2ax7yzj?key=531e7a467ab5c9e7604885b9f4596fe7",
         "https://www.profitableratecpm.com/ky141uaj5?key=7aadd6e991c234d460c699d2838cece9"
       ];
-      urls.forEach(url => window.open(url, '_blank'));
+
+      let index = 0;
+      const interval = setInterval(() => {
+        if (index < urls.length) {
+          window.open(urls[index], '_blank');
+          index++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 1000); // हर 1 सेकंड में एक टैब खुलेगा
     }
   </script>
 </head>
 <body>
-  <h2>👇 नीचे क्लिक करें, सभी 10 वेबसाइट्स खुलेंगी</h2>
+  <h2>👇 नीचे क्लिक करें, सभी 10 वेबसाइट्स धीरे-धीरे खुलेंगी</h2>
   <button onclick="openSites()">सभी साइट्स खोलें</button>
 </body>
 </html>
